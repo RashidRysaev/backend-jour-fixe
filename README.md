@@ -6,6 +6,10 @@ Runs in Docker container.
 - docker compose exec web ./manage.py migrate
 - docker compose exec web ./manage.py createsuperuser (for any db changes)
 
+###### Most important info about the package:
+- works with ViewSets only
+- doesnt create own fixtures
+- strange behaviour with custom / overriden methods
 
 ###### Package commands (since Django Management Commands):
 - docker compose run web ./manage.py generate_viewset_tests -r heroes_app.urls.router --output-file testing.py --variant pytest
@@ -18,8 +22,3 @@ from rest_framework.test import APIClient
 def client():
     return APIClient()
 
-
-###### Most important info about the package:
-- works with ViewSets only
-- doesnt create own fixtures
-- strange behaviour with custom / overriden methods
