@@ -11,6 +11,7 @@ Runs in Docker container.
 - docker compose run web ./manage.py generate_viewset_tests -r heroes_app.urls.router --output-file testing.py --variant pytest
 - add fixture:
 
+```
 from rest_framework.test import APIClient
 
 @pytest.fixture
